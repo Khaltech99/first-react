@@ -1,38 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Red);
+    background-image: url(./images/bg-intro-mobile.png);
+    font-family: "Poppins", sans-serif;
+}
+
 .App {
-  text-align: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 4rem;
+    width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    column-gap: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.word {
+    color: #fff;
+    text-align: left;
+    width: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.word-hd {
+    font-weight: 700;
+    font-size: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text {
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+::placeholder {
+    font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+    color: white;
+    background: var(--Blue);
+}
+
+input {
+    padding: 0.7rem;
+    outline: none;
+    border: 0.2px solid #999;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+input:focus,
+input:active {
+    border: 1px solid #666;
+    transition: all 0.3s ease;
+}
+
+form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    padding-bottom: 0;
+}
+
+.submit {
+    padding: 1rem;
+    color: #fff;
+    background-color: var(--Green);
+}
+
+.btn {
+    background-color: var(--Blue);
+    padding: 0.01rem;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 3px 0 0 rgb(134, 134, 137);
+    width: 100%;
+    font-weight: 200;
+}
+
+.red {
+    color: var(--Red);
+    margin-left: 5px;
+}
+
+h5 {
+    color: var(--Grayish-Blue);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.bold h5 {
+    font-weight: 400;
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: right;
+}
+
+@media (max-width: 477px) {
+    .App {
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        padding: 3rem 1rem;
+    }
+    .word {
+        color: #fff;
+        text-align: center;
+        width: 100%;
+    }
+    form {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 0;
+    }
+    .rug {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .btn {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
 }
